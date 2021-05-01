@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <HeaderWrapper>
       <HeaderLeft>
-        <MenuIcon style={{ color: "black" }} />
+        <MenuIcon style={{ color: "black" }} style={{ fontSize: 30 }} />
       </HeaderLeft>
       <HeaderMid>
         <Link to='/'>
