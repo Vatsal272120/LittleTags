@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
+import { useHistory } from "react-router-dom";
 import { MobileIcon } from "./Styles";
 import styled from "styled-components";
 import { Lock } from "@styled-icons/material";
 import PersonIcon from "@material-ui/icons/Person";
 import MenuIcon from "@material-ui/icons/Menu";
-import "./headerstyles.css";
 
 import {
   HeaderWrapper,
@@ -21,17 +21,33 @@ import { Link } from "react-router-dom";
 import SearchBar from "./../SearchBar/Search";
 
 const Header = () => {
+  const history = useHistory();
+
   const [showSearch, setshowSearch] = useState(false);
+
+  const [siderBarShow, setsiderBarShow] = useState(false);
 
   const toggle = () => {
     console.log("search");
     setshowSearch(!showSearch);
   };
 
+  const toggleSiderBar = () => {
+    setsiderBarShow(!siderBarShow);
+  };
+
+  const sendToCartPage = () => {
+    history.push("/cart");
+  };
+
   return (
     <HeaderWrapper>
       <HeaderLeft>
-        <MenuIcon style={{ color: "black" }} style={{ fontSize: 30 }} />
+        <MenuIcon
+          style={{ color: "black" }}
+          style={{ fontSize: 30 }}
+          onClick={toggleSiderBar}
+        />
       </HeaderLeft>
       <HeaderMid>
         <Link to='/'>
@@ -52,7 +68,7 @@ const Header = () => {
           <Search onClick={toggle} style={{ color: "black" }} />
         </Link>
 
-        <Link to='/account'>
+        <Link to='/cart'>
           <Cart style={{ color: "black" }} />
         </Link>
       </HeaderRight>
