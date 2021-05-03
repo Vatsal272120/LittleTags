@@ -97,7 +97,17 @@ export const DrawerMenu_Primary = styled.nav`
   color: #5c5c5c;
 `;
 
-export const DrawerMenu_Secondary = styled.nav``;
+export const DrawerMenu_Secondary = styled.nav`
+  margin-top: 28px;
+  display: block;
+  color: #5c5c5c;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.65;
+  font-size: 13px;
+  text-size-adjust: 100%;
+`;
 
 export const AfterEmpty = styled.div`
   box-sizing: border-box !important;
@@ -108,4 +118,49 @@ export const AfterEmpty = styled.div`
   -webkit-font-smoothing: antialiased;
 `;
 
-export const DrawerFooter = styled.div``;
+export const DrawerFooter = styled.aside`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.65;
+  width: 100%;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 48px;
+  box-shadow: 0 1px rgb(92 92 92 / 25%) inset;
+  color: rgba(92, 92, 92, 0.5);
+  flex: none;
+`;
+
+export const FooterBefore = styled.div`
+  bottom: 100%;
+  height: 30px;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.6) 40%,
+    white
+  );
+position: 
+  content: "";
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+`;
+
+export const Socials = styled.div`
+  bottom: 0;
+  display: inline-block;
+  margin: 6px 8px 6px 8px;
+
+  .instagram {
+    color: inherit;
+    margin: 15px;
+    transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    background-color: transparent;
+    text-decoration: none;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+`;
