@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../Components/Header/Header";
+import SideDrawer from "../Components/SideDrawer/Index";
 
 const HomePage = () => {
   /* const [isOpen, setIsOpen] = useState(false);

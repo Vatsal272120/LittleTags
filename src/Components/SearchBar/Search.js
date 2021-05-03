@@ -16,7 +16,7 @@ const SearchBar = ({ showSearch, toggle }) => {
 
   const searchPage = (e) => {
     e.preventDefault();
-    history.push("/new");
+    history.location("/new");
   };
 
   return (

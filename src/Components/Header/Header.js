@@ -19,13 +19,14 @@ import {
 } from "./Styles";
 import { Link } from "react-router-dom";
 import SearchBar from "./../SearchBar/Search";
+import SideDrawer from "./../SideDrawer/Index";
 
 const Header = () => {
   const history = useHistory();
 
   const [showSearch, setshowSearch] = useState(false);
 
-  const [siderBarShow, setsiderBarShow] = useState(false);
+  const [sideDrawer, setsideDrawer] = useState(false);
 
   const toggle = () => {
     console.log("search");
@@ -33,11 +34,7 @@ const Header = () => {
   };
 
   const toggleSiderBar = () => {
-    setsiderBarShow(!siderBarShow);
-  };
-
-  const sendToCartPage = () => {
-    history.push("/cart");
+    setsideDrawer(!sideDrawer);
   };
 
   return (
@@ -48,6 +45,7 @@ const Header = () => {
           style={{ fontSize: 30 }}
           onClick={toggleSiderBar}
         />
+        {sideDrawer ? <SideDrawer toggleSiderBar={toggleSiderBar} /> : null}
       </HeaderLeft>
       <HeaderMid>
         <Link to='/'>
