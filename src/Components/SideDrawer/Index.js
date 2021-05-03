@@ -1,12 +1,36 @@
 import React from "react";
-import { SideDrawerWrapper, DrawerHeader } from "./Styles";
+import {
+  SideDrawerWrapper,
+  DrawerHeader,
+  Empty,
+  DrawerMain,
+  DrawerContainer,
+  DrawerMenu_Primary,
+  DrawerMenu_Secondary,
+  AfterEmpty,
+  DrawerFooter,
+} from "./Styles";
 import CloseIcon from "@material-ui/icons/Close";
+import SideDrawerOptions from "./SideDrawerOptions";
 
 const SideDrawer = ({ toggleSiderBar, showSiderBar }) => {
   return (
     <SideDrawerWrapper>
-      <CloseIcon onClick={toggleSiderBar} />
-      <DrawerHeader></DrawerHeader>
+      <DrawerHeader>
+        <CloseIcon onClick={toggleSiderBar} />
+      </DrawerHeader>
+      <Empty></Empty>
+      <DrawerMain>
+        <DrawerContainer>
+          <DrawerMenu_Primary>
+            Primary Navigation
+            <SideDrawerOptions />
+          </DrawerMenu_Primary>
+          <DrawerMenu_Secondary>Secondary Navigation</DrawerMenu_Secondary>
+          <AfterEmpty>After empty</AfterEmpty>
+          <DrawerFooter>Footer</DrawerFooter>
+        </DrawerContainer>
+      </DrawerMain>
     </SideDrawerWrapper>
   );
 };
