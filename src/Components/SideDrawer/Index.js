@@ -32,11 +32,22 @@ const SideDrawer = ({ toggleSiderBar, showSiderBar }) => {
       <DrawerMain>
         <DrawerContainer>
           <DrawerMenu_Primary>
-            <SideDrawerOptions name='Shop' />
-            <SideDrawerOptions name='New Arrivals' />
-            <SideDrawerOptions name='Collections' />
-            <SideDrawerOptions name='BestSellers' />
-            <SideDrawerOptions name='Shop' />
+            <SideDrawerOptions name='Shop' url />
+            <SideDrawerOptions
+              name='New Arrivals'
+              urlMen='/shop/newarrivals/men'
+              urlWomen='/shop/newarrivals/women'
+            />
+            <SideDrawerOptions
+              name='Collections'
+              urlMen='/shop/collections/men'
+              urlWomen='/shop/collections/women'
+            />
+            <SideDrawerOptions
+              name='BestSellers'
+              urlMen='/shop/bestsellers/men'
+              urlWomen='/shop/bestsellers/women'
+            />
           </DrawerMenu_Primary>
           <DrawerMenu_Secondary>
             <ul className='linkList'>
