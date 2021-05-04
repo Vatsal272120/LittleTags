@@ -102,3 +102,147 @@ export const LoginFormHeader = styled.header`
     line-height: 1.65;
   }
 `;
+
+export const LoginFormItem = styled.div`
+  margin-bottom: 15px;
+  position: relative;
+  display: block;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #5c5c5c;
+  line-height: 1.65;
+
+  .formInput {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: 16px 18px;
+    background-position: 98% 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    display: block;
+    padding: 12px 14px;
+    border-radius: 0;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    line-height: normal;
+    resize: none;
+    transition: border-color 0.1s ease-in-out;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    box-sizing: border-box !important;
+    -webkit-font-smoothing: antialiased;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    text-align: start;
+    -webkit-rtl-ordering: logical;
+    text-size-adjust: 100%;
+  }
+
+  .floatingLabel {
+    position: absolute;
+    bottom: calc(100% - 8px);
+    left: 10px;
+    padding: 0 5px;
+    line-height: normal;
+    color: #939393;
+    font-size: 11px;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0);
+    pointer-events: none;
+    transform: translateY(3px);
+    transition: all 0.3s ease-in-out;
+    cursor: default;
+    box-sizing: border-box !important;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    --window-height: 937px;
+    --header-height: 61px;
+    --header-is-not-transparent: 1;
+  }
+
+  /* .forgetPassword {
+    position: absolute;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    box-sizing: border-box !important;
+    -webkit-font-smoothing: antialiased;
+    right: 12px;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    background: none;
+    border: none;
+    border-radius: 0;
+    top: 50%;
+    font-size: 11px;
+    color: #939393;
+    transform: translateY(-50%);
+    -webkit-appearance: button;
+    text-transform: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  } */
+`;
+
+export const LoginSubmit = styled.button`
+  display: block;
+  margin-top: 20px;
+  width: 100%;
+  color: white;
+  border-color: #ff9999;
+  position: relative;
+  padding: 14px 28px;
+  line-height: normal;
+  border: 1px solid transparent;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 11px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  font-family: Futura, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #ff9999;
+  transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86),
+    border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: 1;
+  -webkit-tap-highlight-color: initial;
+  -webkit-appearance: button;
+  cursor: pointer;
+  overflow: visible;
+  font: inherit;
+  margin: 0;
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  word-spacing: normal;
+  text-indent: 0px;
+  text-shadow: none;
+  align-items: flex-start;
+  --window-height: 937px;
+  --header-height: 61px;
+  --header-is-not-transparent: 1;
+
+  &:hover {
+    transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+`;
