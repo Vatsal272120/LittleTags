@@ -144,6 +144,11 @@ export const LoginFormItem = styled.div`
     text-align: start;
     -webkit-rtl-ordering: logical;
     text-size-adjust: 100%;
+
+    @media screen and (max-width: 405px) {
+      width: 80vw;
+      margin: 35px;
+    }
   }
 
   .floatingLabel {
@@ -244,5 +249,10 @@ export const LoginSubmit = styled.button`
 
   &:hover {
     transition: transform 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  }
+
+  @media screen and (max-width: 405px) {
+    width: 80vw;
+    margin: 35px;
   }
 `;
