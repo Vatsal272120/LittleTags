@@ -4,17 +4,26 @@ import {
   LoginSection,
   LoginContainer,
   LoginPageContent,
+  LoginForm,
+  LoginFormHeader,
 } from "./LoginStyles";
 
 const Login = () => {
   return (
     <LoginWrapper>
-      login wrapper
       <LoginSection>
-        login section
         <LoginContainer>
-          login container
-          <LoginPageContent></LoginPageContent>
+          {" "}
+          <LoginPageContent>
+            <LoginForm>
+              <LoginFormHeader>
+                <h1 className='formTitle'>Login</h1>
+                <p className='formLegend'>
+                  Please enter your email and password
+                </p>
+              </LoginFormHeader>
+            </LoginForm>
+          </LoginPageContent>
         </LoginContainer>
       </LoginSection>
     </LoginWrapper>
