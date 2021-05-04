@@ -47,6 +47,7 @@ export const MenuButton = styled.button`
 
   .MuiSvgIcon-root {
     position: absolute;
+
     right: 0;
     top: calc(50% - (11px / 2));
     width: 11px;

@@ -3,9 +3,11 @@ import styled from "styled-components";
 export const SideDrawerWrapper = styled.div`
   max-height: 946px;
   height: 100%;
+  width: 65vw;
   background: white;
   color: #5c5c5c;
   position: fixed;
+  padding-left: 15px;
   top: 0;
   left: 0;
   z-index: 20;
@@ -15,7 +17,9 @@ export const SideDrawerWrapper = styled.div`
   touch-action: manipulation;
 
   @media screen and (min-width: 641px) {
-    width: 340px;
+    .SideDrawerWrapper {
+      width: 340px;
+    }
   }
 
   .MuiSvgIcon-root {

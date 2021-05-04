@@ -32,7 +32,11 @@ const SideDrawer = ({ toggleSiderBar, showSiderBar }) => {
       <DrawerMain>
         <DrawerContainer>
           <DrawerMenu_Primary>
-            <SideDrawerOptions name='Shop' url />
+            <SideDrawerOptions
+              name='Shop'
+              urlMen='/shop/all/men'
+              urlWomen='/shop/all/women'
+            />
             <SideDrawerOptions
               name='New Arrivals'
               urlMen='/shop/newarrivals/men'
