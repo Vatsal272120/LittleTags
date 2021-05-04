@@ -107,6 +107,15 @@ export const DrawerMenu_Secondary = styled.nav`
   line-height: 1.65;
   font-size: 13px;
   text-size-adjust: 100%;
+
+  .linkList {
+  }
+
+  .linkList__item {
+  }
+
+  .account {
+  }
 `;
 
 export const AfterEmpty = styled.div`

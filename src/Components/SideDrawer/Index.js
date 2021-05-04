@@ -35,8 +35,16 @@ const SideDrawer = ({ toggleSiderBar, showSiderBar }) => {
             <SideDrawerOptions name='BestSellers' />
             <SideDrawerOptions name='Shop' />
           </DrawerMenu_Primary>
-          <DrawerMenu_Secondary>Secondary Navigation</DrawerMenu_Secondary>
-          <AfterEmpty>After empty</AfterEmpty>
+          <DrawerMenu_Secondary>
+            <ul className='linkList'>
+              <li className='linkList__item'>
+                <Link to='/account'>
+                  <h3 className='account'>Account</h3>
+                </Link>
+              </li>
+            </ul>
+          </DrawerMenu_Secondary>
+          <AfterEmpty></AfterEmpty>
         </DrawerContainer>
       </DrawerMain>
     </SideDrawerWrapper>
