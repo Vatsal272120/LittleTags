@@ -109,12 +109,49 @@ export const DrawerMenu_Secondary = styled.nav`
   text-size-adjust: 100%;
 
   .linkList {
+    border-color: rgba(92, 92, 92, 0.25);
+    list-style: none;
+    padding: 0;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    display: block;
+    color: #5c5c5c;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 400;
+    line-height: 1.65;
+    font-style: normal;
   }
 
   .linkList__item {
+    margin-bottom: 0 !important;
+    width: 100%;
+    line-height: 1.5;
+    text-align: left;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    display: block;
   }
 
   .account {
+    display: block;
+    width: 100%;
+    text-align: inherit;
+
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    transition: color 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    color: rgba(92, 92, 92, 0.5);
+    background-color: transparent;
+    text-decoration: none !important;
+    line-height: 1.5;
+  }
+
+  .h3 {
+    text-decoration: none !important;
   }
 `;
 

@@ -17,9 +17,12 @@ import SideDrawerOptions from "./SideDrawerOptions/SideDrawerOptions";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import EmailIcon from "@material-ui/icons/Email";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const SideDrawer = ({ toggleSiderBar, showSiderBar }) => {
+  const history = useHistory();
+
+  const redirect = () => history.push("/account");
   return (
     <SideDrawerWrapper>
       <DrawerHeader>
@@ -38,9 +41,9 @@ const SideDrawer = ({ toggleSiderBar, showSiderBar }) => {
           <DrawerMenu_Secondary>
             <ul className='linkList'>
               <li className='linkList__item'>
-                <Link to='/account'>
-                  <h3 className='account'>Account</h3>
-                </Link>
+                <h3 className='account' onClick={redirect}>
+                  Account
+                </h3>
               </li>
             </ul>
           </DrawerMenu_Secondary>
