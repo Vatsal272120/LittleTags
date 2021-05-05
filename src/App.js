@@ -6,16 +6,14 @@ import HomePage from "./Pages/HomePage";
 import CartPage from "./Pages/CartPage";
 
 import AccountLogin from "./Pages/AccountLogin";
+import AccountRegister from "./Pages/AccountRegister";
 
 function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/new'>
-          <h1>New</h1>
-        </Route>
         <Route path='/register'>
-          <AccountLogin />
+          <AccountRegister />
         </Route>
         <Route path='/account'>
           <AccountLogin />
