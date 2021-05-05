@@ -10,6 +10,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 export const HeaderWrapper = styled.div`
+  margin: 15px;
   background: white;
   display: flex;
   color: #5c5c5c;
