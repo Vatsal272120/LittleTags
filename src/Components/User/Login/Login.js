@@ -8,9 +8,17 @@ import {
   LoginFormHeader,
   LoginFormItem,
   LoginSubmit,
+  LoginHint,
+  LoginSocials,
 } from "./LoginStyles";
+import { useHistory, Link } from "react-router-dom";
+import FacebookIcon from "@material-ui/icons/Facebook";
 
 const Login = () => {
+  const history = useHistory();
+
+  const redirectToRegisterPage = () => history.push("/register");
+
   return (
     <LoginWrapper>
       <LoginSection>
@@ -44,6 +52,14 @@ const Login = () => {
                 <label className='floatingLabel'>Password</label>
               </LoginFormItem>
               <LoginSubmit>Login</LoginSubmit>
+              <LoginHint>
+                <span className='text'>Don't have an account?</span>
+
+                <div onClick={redirectToRegisterPage}>
+                  <p className='linkToRegister'>Create one</p>
+                </div>
+              </LoginHint>
+              <LoginSocials>Link socials will go here</LoginSocials>
             </LoginForm>
           </LoginPageContent>
         </LoginContainer>

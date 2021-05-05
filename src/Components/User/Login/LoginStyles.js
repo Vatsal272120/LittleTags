@@ -256,3 +256,46 @@ export const LoginSubmit = styled.button`
     margin: 35px;
   }
 `;
+
+export const LoginHint = styled.div`
+  margin-bottom: 32px;
+  display: flex;
+  text-align: center;
+  margin: 24px 0 0 0;
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #5c5c5c;
+  text-align: center;
+  line-height: 1.65;
+
+  .text {
+    color: #939393;
+    box-sizing: border-box !important;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.65;
+    box-sizing: border-box !important;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .linkToRegister {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+    box-sizing: border-box !important;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    font-family: "Century Gothic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+`;
+
+export const LoginSocials = styled.div``;
