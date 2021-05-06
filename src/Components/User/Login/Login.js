@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   LoginWrapper,
   LoginSection,
@@ -16,6 +16,13 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 
 const Login = () => {
   const history = useHistory();
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signIn = (e) => {
+    e.preventDefault();
+  };
 
   const redirectToRegisterPage = () => history.push("/register");
 
@@ -39,6 +46,8 @@ const Login = () => {
                   type='email'
                   className='formInput'
                   placeholder='Email'
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   autofocus
                   required
                 />
@@ -48,12 +57,14 @@ const Login = () => {
                 <input
                   type='password'
                   className='formInput'
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
                   placeholder='Password'
                   required
                 />
                 <label className='floatingLabel'>Password</label>
               </LoginFormItem>
-              <LoginSubmit>Login</LoginSubmit>
+              <LoginSubmit onClick={signIn}>Login</LoginSubmit>
               <LoginHint>
                 <span className='restore' onClick={redirectToRestorePassword}>
                   Click to reset password
