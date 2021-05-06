@@ -12,7 +12,7 @@ import {
   LoginSocials,
 } from "./LoginStyles";
 import { useHistory, Link } from "react-router-dom";
-import FacebookIcon from "@material-ui/icons/Facebook";
+import { auth } from "../../../Utils/firebaseUtility";
 
 const Login = () => {
   const history = useHistory();
@@ -22,6 +22,16 @@ const Login = () => {
 
   const signIn = (e) => {
     e.preventDefault();
+
+    auth
+      .signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        console.log(userCredential);
+        if (userCredential) {
+          history.push("/");
+        }
+      })
+      .catch((e) => alert(e.message));
   };
 
   const redirectToRegisterPage = () => history.push("/register");
