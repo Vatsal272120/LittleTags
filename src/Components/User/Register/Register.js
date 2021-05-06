@@ -101,7 +101,7 @@ const Register = () => {
                 <label className='floatingLabel'>Password</label>
               </LoginFormItem>
               <LoginSubmit onClick={register}>Create my Account</LoginSubmit>
-              <LoginSocials>Link socials will go here</LoginSocials>
+              <LoginSocials></LoginSocials>
             </LoginForm>
           </LoginPageContent>
         </LoginContainer>
