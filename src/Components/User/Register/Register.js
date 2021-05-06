@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   LoginWrapper,
   LoginSection,
@@ -13,6 +13,13 @@ import {
 } from "../Login/LoginStyles";
 
 const Register = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+
+  const register = (e) => {};
+
   return (
     <LoginWrapper>
       <LoginSection>
@@ -65,7 +72,7 @@ const Register = () => {
                 />
                 <label className='floatingLabel'>Password</label>
               </LoginFormItem>
-              <LoginSubmit>Create my Account</LoginSubmit>
+              <LoginSubmit onClick={register}>Create my Account</LoginSubmit>
               <LoginSocials>Link socials will go here</LoginSocials>
             </LoginForm>
           </LoginPageContent>
