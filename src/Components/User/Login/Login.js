@@ -19,6 +19,8 @@ const Login = () => {
 
   const redirectToRegisterPage = () => history.push("/register");
 
+  const redirectToRestorePassword = () => history.push("/restorepassword");
+
   return (
     <LoginWrapper>
       <LoginSection>
@@ -53,13 +55,18 @@ const Login = () => {
               </LoginFormItem>
               <LoginSubmit>Login</LoginSubmit>
               <LoginHint>
+                <span className='restore' onClick={redirectToRestorePassword}>
+                  Click to reset password
+                </span>
+              </LoginHint>
+              <LoginHint>
                 <span className='text'>Don't have an account?</span>
 
-                <div onClick={redirectToRegisterPage}>
+                <span onClick={redirectToRegisterPage}>
                   <p className='linkToRegister'>Create one</p>
-                </div>
+                </span>
               </LoginHint>
-              <LoginSocials>Link socials will go here</LoginSocials>
+              <LoginSocials></LoginSocials>
             </LoginForm>
           </LoginPageContent>
         </LoginContainer>

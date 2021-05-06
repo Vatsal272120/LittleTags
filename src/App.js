@@ -7,11 +7,20 @@ import CartPage from "./Pages/CartPage";
 
 import AccountLogin from "./Pages/AccountLogin";
 import AccountRegister from "./Pages/AccountRegister";
+import Recover from "./Components/User/RecoverPassword/Recover";
+import Header from "./Components/Header/Header";
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path='/cart'>
+          <AccountRegister />
+        </Route>
+        <Route path='/restorepassword'>
+          <Header />
+          <Recover />
+        </Route>
         <Route path='/register'>
           <AccountRegister />
         </Route>

@@ -280,9 +280,15 @@ export const LoginHint = styled.div`
     font-family: "Century Gothic", sans-serif;
     font-weight: 400;
     font-style: normal;
+
     line-height: 1.65;
     box-sizing: border-box !important;
     -webkit-font-smoothing: antialiased;
+  }
+
+  .restore {
+    cursor: pointer;
+    color: #939393;
   }
 
   .linkToRegister {
