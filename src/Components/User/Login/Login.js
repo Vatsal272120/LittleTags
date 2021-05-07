@@ -13,8 +13,10 @@ import {
 } from "./LoginStyles";
 import { useHistory, Link } from "react-router-dom";
 import { auth } from "../../../Utils/firebaseUtility";
+import { useStateValue } from "./../../../DataContext/StateProvider";
 
 const Login = () => {
+  const [{ user }, dispatch] = useStateValue();
   const history = useHistory();
 
   const [email, setEmail] = useState("");
@@ -26,8 +28,11 @@ const Login = () => {
     auth
       .signInWithEmailAndPassword(email, password)
       .then((userCredential) => {
-        console.log(userCredential);
         if (userCredential) {
+          dispatch({
+            type: "SET_USER",
+            user: userCredential,
+          });
           history.push("/");
         }
       })
@@ -37,6 +42,8 @@ const Login = () => {
   const redirectToRegisterPage = () => history.push("/register");
 
   const redirectToRestorePassword = () => history.push("/restorepassword");
+
+  console.log(user);
 
   return (
     <LoginWrapper>
@@ -87,7 +94,13 @@ const Login = () => {
                   <p className='linkToRegister'>Create one</p>
                 </span>
               </LoginHint>
-              <LoginSocials></LoginSocials>
+              <LoginSocials>
+                <a
+                  href='javascript:void(0)'
+                  data-href='https://www.ndnapps.com/ndnapps/sociallogin/social-login/redirect/google?domain=amrapaliboutique.myshopify.com'
+                  class='ndn-icon icon-google cl-google ndn-social-connect '
+                  title='Google'></a>
+              </LoginSocials>
             </LoginForm>
           </LoginPageContent>
         </LoginContainer>

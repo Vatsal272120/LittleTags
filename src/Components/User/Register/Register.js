@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { auth } from "../../../Utils/firebaseUtility";
+import React, { useState, useEffect } from "react";
+import { auth, db } from "../../../Utils/firebaseUtility";
 import {
   LoginWrapper,
   LoginSection,
@@ -13,8 +13,10 @@ import {
   LoginSocials,
 } from "../Login/LoginStyles";
 import { useHistory } from "react-router-dom";
+import { useStateValue } from "./../../../DataContext/StateProvider";
 
 const Register = () => {
+  const [{ user }, dispatch] = useStateValue();
   const history = useHistory();
 
   const [email, setEmail] = useState("");
@@ -28,16 +30,19 @@ const Register = () => {
     // register the user
     auth
       .createUserWithEmailAndPassword(email, password)
-      .then((authenticatedUser) => {
-        console.log(authenticatedUser);
+      .then((response) => {
+        console.log(response);
 
-        if (authenticatedUser) {
-          history.push("/");
-        }
-
-        auth.signOut();
+        return db.collection("Users").doc(response.user.uid).set({
+          firstName: firstName,
+          lastName: lastName,
+          email: email,
+        });
       })
       .catch((e) => alert(e.message));
+
+    auth.signOut();
+    history.push("/");
   };
 
   return (
