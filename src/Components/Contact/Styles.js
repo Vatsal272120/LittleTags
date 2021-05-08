@@ -128,6 +128,7 @@ export const ContentDetails = styled.div`
   .details {
     margin-bottom: 0;
     margin-top: 0;
+    padding-left: 15px
     font-size: inherit;
     font-weight: inherit;
     display: block;
@@ -138,6 +139,7 @@ export const ContentDetails = styled.div`
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     line-height: 1.65;
+
   }
 
   .link {
