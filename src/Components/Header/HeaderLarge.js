@@ -8,6 +8,9 @@ import {
   HeaderNav,
   HeaderMiddle,
   HeaderRight,
+  User,
+  Search,
+  Cart,
 } from "./HeaderLargeStyles";
 import SearchBar from "./../SearchBar/Search";
 import { Link, useHistory } from "react-router-dom";
@@ -27,7 +30,6 @@ const HeaderLarge = () => {
       <HeaderSection>
         <HeaderWrapper>
           <HeaderLeft>
-            <h4>Header Left</h4>
             <HeaderNav>
               <h5>Header Nav</h5>
             </HeaderNav>
@@ -44,7 +46,16 @@ const HeaderLarge = () => {
             </h1>
           </HeaderMiddle>
           <HeaderRight>
-            <h7>Header Right</h7>
+            <Link to='/account'>
+              <User style={{ color: "black" }} />
+            </Link>
+            <Link>
+              <Search onClick={toggle} style={{ color: "black" }} />
+            </Link>
+
+            <Link to='/cart'>
+              <Cart style={{ color: "black" }} />
+            </Link>
           </HeaderRight>
         </HeaderWrapper>
       </HeaderSection>

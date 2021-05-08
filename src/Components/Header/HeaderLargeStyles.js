@@ -113,3 +113,64 @@ export const HeaderRight = styled.div`
     margin-bottom: 40px;
   }
 `;
+
+export const User = styled(PersonIcon)`
+  @media screen and (min-width: 641px) {
+    .MuiSvgIcon-root {
+      position: relative;
+      top: 2px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+  display: flex;
+  font-size: 1.5rem;
+  font-color: black !important;
+  margin-right: 1rem;
+  align-items: center;
+  cursor: pointer;
+  .MuiSvgIcon-root {
+    text-decoration: none !important;
+    font-color: black;
+  }
+
+  @media screen and (max-width: 641px) {
+    display: none;
+  } ;
+`;
+
+export const Cart = styled(ShoppingCartIcon)`
+  @media screen and (min-width: 641px) .Header__Icon .Icon--account {
+    position: relative;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+  }
+  display: flex;
+  font-size: 1.5rem;
+  font-color: black;
+  margin-right: 1rem;
+  cursor: pointer;
+  .user {
+    text-decoration: none !important;
+    color: black;
+  }
+`;
+
+export const Search = styled(SearchIcon)`
+  @media screen and (min-width: 641px) .Header__Icon .Icon--account {
+    position: relative;
+    top: 2px;
+    width: 20px;
+    height: 20px;
+  }
+  display: flex;
+  font-size: 1.5rem;
+  font-color: black;
+  margin-right: 1rem;
+  cursor: pointer;
+  .user {
+    text-decoration: none !important;
+    color: black;
+  }
+`;
