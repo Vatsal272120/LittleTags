@@ -43,8 +43,6 @@ const Login = () => {
 
   const redirectToRestorePassword = () => history.push("/restorepassword");
 
-  console.log(user);
-
   return (
     <LoginWrapper>
       <LoginSection>

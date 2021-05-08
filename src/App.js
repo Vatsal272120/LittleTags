@@ -9,6 +9,7 @@ import Recover from "./Components/User/RecoverPassword/Recover";
 import Header from "./Components/Header/Header";
 import { auth } from "./Utils/firebaseUtility";
 import { useStateValue } from "./DataContext/StateProvider";
+import ContactUs from "./Pages/ContactUs";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -33,13 +34,11 @@ function App() {
     });
   }, []);
 
-  console.log(user);
-
   return (
     <Router>
       <Switch>
-        <Route path='/cart'>
-          <AccountRegister />
+        <Route path='/contact'>
+          <ContactUs />
         </Route>
         <Route path='/restorepassword'>
           <Header />

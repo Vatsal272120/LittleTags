@@ -27,19 +27,19 @@ const Register = () => {
   const register = (e) => {
     e.preventDefault();
 
-    // register the user
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((response) => {
-        console.log(response);
-
-        return db.collection("Users").doc(response.user.uid).set({
-          firstName: firstName,
-          lastName: lastName,
-          email: email,
-        });
+        const user = response.user;
+        if (user) {
+          user.updateProfile({ displayName: firstName }).then((response) => {
+            if (response) {
+              console.log(response);
+            }
+          });
+        }
       })
-      .catch((e) => alert(e.message));
+      .catch((e) => alert(e));
 
     auth.signOut();
     history.push("/");
