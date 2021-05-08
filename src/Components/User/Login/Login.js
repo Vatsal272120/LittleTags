@@ -13,7 +13,7 @@ import {
   SocialButtons,
 } from "./LoginStyles";
 import { useHistory, Link } from "react-router-dom";
-import { auth, provider } from "../../../Utils/firebaseUtility";
+import { auth, provider, facbookAuth } from "../../../Utils/firebaseUtility";
 import { useStateValue } from "./../../../DataContext/StateProvider";
 
 const Login = () => {
@@ -51,6 +51,15 @@ const Login = () => {
 
   const facebookAuth = (e) => {
     e.preventDefault();
+
+    auth
+      .signInWithPopup(facbookAuth)
+      .then((result) => {
+        console.log(result, " facebook user");
+      })
+      .catch((e) => alert(e));
+
+    history.push("/");
   };
 
   // googleAuthentication
@@ -69,8 +78,6 @@ const Login = () => {
 
     history.push("/");
   };
-
-  const redirectToRestorePassword = () => history.push("/restorepassword");
 
   return (
     <LoginWrapper>
