@@ -304,4 +304,29 @@ export const LoginHint = styled.div`
   }
 `;
 
-export const LoginSocials = styled.div``;
+export const LoginSocials = styled.div`
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .facebookLogo {
+    object-fit: contain;
+    align-items: center;
+    height: 35px;
+  }
+
+  .googleLogo {
+    object-fit: contain;
+    align-items: center;
+    height: 35px;
+  }
+`;
+
+export const SocialButtons = styled.button`
+  background: none;
+  outline: none;
+  margin: 15px;
+  border-width: 0;
+  cursor: pointer;
+`;

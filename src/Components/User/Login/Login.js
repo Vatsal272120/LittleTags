@@ -10,9 +10,10 @@ import {
   LoginSubmit,
   LoginHint,
   LoginSocials,
+  SocialButtons,
 } from "./LoginStyles";
 import { useHistory, Link } from "react-router-dom";
-import { auth } from "../../../Utils/firebaseUtility";
+import { auth, provider } from "../../../Utils/firebaseUtility";
 import { useStateValue } from "./../../../DataContext/StateProvider";
 
 const Login = () => {
@@ -21,6 +22,8 @@ const Login = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  // email and password auth
 
   const signIn = (e) => {
     e.preventDefault();
@@ -37,9 +40,35 @@ const Login = () => {
         }
       })
       .catch((e) => alert(e.message));
+
+    setEmail("");
+    setPassword("");
+
+    history.push("/");
   };
 
-  const redirectToRegisterPage = () => history.push("/register");
+  // facebook authentication
+
+  const facebookAuth = (e) => {
+    e.preventDefault();
+  };
+
+  // googleAuthentication
+  const googleAuth = (e) => {
+    e.preventDefault();
+
+    auth
+      .signInWithPopup(provider)
+      .then((result) =>
+        dispatch({
+          type: "SET_USER",
+          user: result,
+        })
+      )
+      .catch((e) => alert(e.message));
+
+    history.push("/");
+  };
 
   const redirectToRestorePassword = () => history.push("/restorepassword");
 
@@ -81,23 +110,37 @@ const Login = () => {
               </LoginFormItem>
               <LoginSubmit onClick={signIn}>Login</LoginSubmit>
               <LoginHint>
-                <span className='restore' onClick={redirectToRestorePassword}>
+                <span
+                  className='restore'
+                  onClick={() => history.push("/restorepassword")}>
                   Click to reset password
                 </span>
               </LoginHint>
               <LoginHint>
                 <span className='text'>Don't have an account?</span>
 
-                <span onClick={redirectToRegisterPage}>
+                <span onClick={() => history.push("/register")}>
                   <p className='linkToRegister'>Create one</p>
                 </span>
               </LoginHint>
+              <LoginHint>
+                <span className='text'></span>
+              </LoginHint>
               <LoginSocials>
-                <a
-                  href='javascript:void(0)'
-                  data-href='https://www.ndnapps.com/ndnapps/sociallogin/social-login/redirect/google?domain=amrapaliboutique.myshopify.com'
-                  class='ndn-icon icon-google cl-google ndn-social-connect '
-                  title='Google'></a>
+                <SocialButtons onClick={facebookAuth}>
+                  <img
+                    className='facebookLogo'
+                    src='https://facebookbrand.com/wp-content/uploads/2019/04/f_logo_RGB-Hex-Blue_512.png?w=512&h=512'
+                    alt='facebook'
+                  />
+                </SocialButtons>
+                <SocialButtons onClick={googleAuth}>
+                  <img
+                    className='googleLogo'
+                    src='https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png'
+                    alt='facebook'
+                  />
+                </SocialButtons>
               </LoginSocials>
             </LoginForm>
           </LoginPageContent>
