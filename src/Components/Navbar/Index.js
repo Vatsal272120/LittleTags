@@ -56,7 +56,7 @@ const Navbar = () => {
             New Arrivals
           </p>
           <span className='linkSpacer'></span>
-          {showNewArrivals ? <DropDown newArrivals={newArrivals} /> : null}
+          {showNewArrivals ? <MegaMenu newArrivals={newArrivals} /> : null}
         </Link>
       </ListItem>
       <ListItem>
@@ -65,7 +65,7 @@ const Navbar = () => {
             Collections
           </p>
           <span className='linkSpacer'></span>
-          {showCollections ? <DropDown collections={collections} /> : null}
+          {showCollections ? <MegaMenu collections={collections} /> : null}
         </Link>
       </ListItem>
       <ListItem>
@@ -74,7 +74,7 @@ const Navbar = () => {
             BestSellers
           </p>
           <span className='linkSpacer'></span>
-          {showBestSellers ? <DropDown bestsellers={bestsellers} /> : null}
+          {showBestSellers ? <MegaMenu bestsellers={bestsellers} /> : null}
         </Link>
       </ListItem>
     </NavbarHorzizontalList>
