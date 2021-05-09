@@ -11,13 +11,33 @@ const Navbar = () => {
   const [showCollections, setshowCollections] = useState(false);
   const [showBestSellers, setshowBestSellers] = useState(false);
 
-  const dropdown = () => setMegaMenu(!megaMenu);
+  const dropdown = () => {
+    setMegaMenu(!megaMenu);
+    setshowNewArrivals(false);
+    setshowCollections(false);
+    setshowBestSellers(false);
+  };
 
-  const newArrivals = () => setshowNewArrivals(!showNewArrivals);
+  const newArrivals = () => {
+    setshowNewArrivals(!showNewArrivals);
+    setMegaMenu(false);
+    setshowCollections(false);
+    setshowBestSellers(false);
+  };
 
-  const collections = () => setshowCollections(!showCollections);
+  const collections = () => {
+    setshowCollections(!showCollections);
+    setshowBestSellers(false);
+    setshowNewArrivals(false);
+    setMegaMenu(false);
+  };
 
-  const bestsellers = () => setshowBestSellers(!showBestSellers);
+  const bestsellers = () => {
+    setshowBestSellers(!showBestSellers);
+    setshowNewArrivals(false);
+    setshowCollections(false);
+    setMegaMenu(false);
+  };
 
   return (
     <NavbarHorzizontalList>
