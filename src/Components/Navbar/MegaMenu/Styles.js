@@ -31,3 +31,25 @@ export const MegaMenuInner = styled.div`
   font-weight: 400;
   font-style: normal;
 `;
+
+export const ListTypeTwo = styled.div`
+  flex-shrink: 0;
+  margin: 20px 40px;
+
+  .link {
+    color: #939393;
+    display: block;
+    margin-bottom: 20px;
+    font-family: Futura, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 641px) {
+      font-size: 12px;
+    }
+  }
+`;

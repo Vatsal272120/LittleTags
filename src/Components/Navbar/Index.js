@@ -6,60 +6,55 @@ import MegaMenu from "./MegaMenu/Index";
 import DropDown from "./DropDown/Index";
 
 const Navbar = () => {
-  const [megaMenu, setmegaMenu] = useState(false);
-  const [isShown, setIsShown] = useState(false);
+  const [megaMenu, setMegaMenu] = useState(false);
   const [showNewArrivals, setshowNewArrivals] = useState(false);
   const [showCollections, setshowCollections] = useState(false);
   const [showBestSellers, setshowBestSellers] = useState(false);
+
+  const dropdown = () => setMegaMenu(!megaMenu);
+
+  const newArrivals = () => setshowNewArrivals(!showNewArrivals);
+
+  const collections = () => setshowCollections(!showCollections);
+
+  const bestsellers = () => setshowBestSellers(!showBestSellers);
 
   return (
     <NavbarHorzizontalList>
       <ListItem>
         <Link to='/' className='navLink'>
-          <p
-            className='navLinkText'
-            onMouseEnter={() => setmegaMenu(true)}
-            onMouseLeave={() => setmegaMenu(false)}>
+          <p className='navLinkText' onClick={dropdown}>
             Shop
           </p>
           <span className='linkSpacer'></span>
-          <MegaMenu />
+          {megaMenu ? <MegaMenu dropdown={dropdown} /> : null}
         </Link>
       </ListItem>
       <ListItem>
         <Link to='/' className='navLink'>
-          <p
-            className='navLinkText'
-            onMouseEnter={() => setshowNewArrivals(true)}
-            onMouseLeave={() => setshowNewArrivals(false)}>
+          <p className='navLinkText' onClick={newArrivals}>
             New Arrivals
           </p>
           <span className='linkSpacer'></span>
-          {showNewArrivals && <DropDown />}
+          {showNewArrivals ? <DropDown newArrivals={newArrivals} /> : null}
         </Link>
       </ListItem>
       <ListItem>
         <Link to='/' className='navLink'>
-          <p
-            className='navLinkText'
-            onMouseEnter={() => setshowCollections(true)}
-            onMouseLeave={() => setshowCollections(false)}>
+          <p className='navLinkText' onClick={collections}>
             Collections
           </p>
           <span className='linkSpacer'></span>
-          {showCollections && <DropDown />}
+          {showCollections ? <DropDown collections={collections} /> : null}
         </Link>
       </ListItem>
       <ListItem>
         <Link to='/' className='navLink'>
-          <p
-            className='navLinkText'
-            onMouseEnter={() => setshowBestSellers(true)}
-            onMouseLeave={() => setshowBestSellers(false)}>
+          <p className='navLinkText' onClick={bestsellers}>
             BestSellers
           </p>
           <span className='linkSpacer'></span>
-          {showBestSellers && <DropDown />}
+          {showBestSellers ? <DropDown bestsellers={bestsellers} /> : null}
         </Link>
       </ListItem>
     </NavbarHorzizontalList>

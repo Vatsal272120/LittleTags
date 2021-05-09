@@ -2,13 +2,13 @@ import React from "react";
 import { ListWrapper, LinkList, LinkListItem } from "./Styles";
 import { Link, useHistory } from "react-router-dom";
 
-const List = ({ url, Men }) => {
+const List = ({ url, Gender }) => {
   const history = useHistory();
 
   return (
     <ListWrapper>
       <Link to={url} className='link'>
-        <p className='linkMain'>{Men}</p>
+        <p className='linkMain'>{Gender}</p>
       </Link>
       <LinkList>
         <LinkListItem>

@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const NavbarHorzizontalList = styled.div`
-  /*   margin: -6px -8px; */
+  
+  margin-bottom:10px
   padding: 0;
   margin-block-start: 1em;
   box-shadow: 0 -1px #e7e7e7 inset;
