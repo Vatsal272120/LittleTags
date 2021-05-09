@@ -6,6 +6,7 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 export const HeaderWrapper = styled.div`
   margin-left: 35px;
+  margin-top: 15px;
   margin-right: 35px;
   background: white;
   color: #5c5c5c;
