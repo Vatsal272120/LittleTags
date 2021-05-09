@@ -1,6 +1,6 @@
 import React from "react";
-import Contact from "../Components/Contact/Contact";
-import Header from "./../Components/Header/Header";
+import Contact from "../Components/Contact/Index";
+import Header from "./../Components/Header/Index";
 
 const ContactUs = () => {
   return (

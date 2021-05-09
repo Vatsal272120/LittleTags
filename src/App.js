@@ -1,15 +1,15 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
-import CartPage from "./Pages/CartPage";
-import AccountLogin from "./Pages/AccountLogin";
-import AccountRegister from "./Pages/AccountRegister";
-import Recover from "./Components/User/RecoverPassword/Recover";
-import Header from "./Components/Header/Header";
+
 import { auth } from "./Utils/firebaseUtility";
 import { useStateValue } from "./DataContext/StateProvider";
 import ContactUs from "./Pages/ContactUs";
+import Header from "./Components/Header/Index";
+import Recover from "./Components/User/RecoverPassword/Index";
+import AccountRegister from "./Pages/AccountRegister";
+import AccountLogin from "./Pages/AccountLogin";
+import HomePage from "./Pages/HomePage";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();

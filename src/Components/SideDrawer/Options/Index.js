@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Options, MenuButton } from "./SideDrawerOptionStyles";
+import { Options, MenuButton } from "./Styles";
 import AddIcon from "@material-ui/icons/Add";
-import MenuList from "./../DrawerMenuList/MenuList";
+
+import MenuList from "./../MenuList/Index";
 
 const SideDrawerOptions = ({ name, urlMen, urlWomen }) => {
   const [showList, setshowList] = useState(false);

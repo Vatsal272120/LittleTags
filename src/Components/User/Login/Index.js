@@ -11,7 +11,7 @@ import {
   LoginHint,
   LoginSocials,
   SocialButtons,
-} from "./LoginStyles";
+} from "./Styles";
 import { useHistory, Link } from "react-router-dom";
 import { auth, provider, facbookAuth } from "../../../Utils/firebaseUtility";
 import { useStateValue } from "./../../../DataContext/StateProvider";

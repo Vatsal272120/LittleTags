@@ -1,7 +1,8 @@
 import React from "react";
-import Header from "../Components/Header/Header";
-import HeaderLarge from "../Components/Header/HeaderLarge";
+import Header from "../Components/Header/Index";
+import HeaderLarge from "../Components/Header/Large/Index";
 import SideDrawer from "../Components/SideDrawer/Index";
+import Navbar from "./../Components/Navbar/Index";
 
 const HomePage = () => {
   /* const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Navbar toggle={toggle} />
       {/* <Login /> */}{" "}
       <HeaderLarge />
+      <Navbar />
     </>
   );
 };

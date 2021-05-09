@@ -4,24 +4,12 @@ import PersonIcon from "@material-ui/icons/Person";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
-export const HeaderWrapperMain = styled.div`
-  position: sticky;
-  width: 100%;
-  margin-top: 15px;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  box-sizing: border-box !important;
-  -webkit-font-smoothing: antialiased;
-  display: flex;
-  flex-direction: column;
-  height: 123px;
-`;
-
-export const HeaderSection = styled.div`
+export const HeaderWrapper = styled.div`
+  margin-left: 35px;
+  margin-right: 35px;
   background: white;
   color: #5c5c5c;
-  box-shadow: 0 -1px #e7e7e7 inset;
+
   transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   display: block;
   box-sizing: border-box !important;
@@ -32,53 +20,20 @@ export const HeaderSection = styled.div`
   --header-is-not-transparent: 1;
 `;
 
-export const HeaderWrapper = styled.div`
+export const HeaderTop = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box !important;
-  -webkit-font-smoothing: antialiased;
-  color: #5c5c5c;
-
-  @media screen and (min-width: 1240px) {
-    padding-bottom: 24px;
-    padding: 18px 50px;
-    opacity: 1;
-    transition: opacity 0.3s ease-in-out;
-  }
+  margin-top: 10px;
 `;
 
 export const HeaderLeft = styled.div`
-  flex: 1 0 0;
+  flex: 0.6;
+
   align-items: center;
-  display: flex;
-  box-sizing: border-box !important;
-  -webkit-font-smoothing: antialiased;
-  color: #5c5c5c;
-
-  @media screen and (min-width: 1240px) {
-    margin-bottom: 40px;
-  }
-`;
-
-export const HeaderNav = styled.nav``;
-
-export const HeaderMiddle = styled.div`
-  display: flex;
-  color: #5c5c5c;
 
   .header__Logo {
-    margin-bottom: 0;
-    position: relative;
-    margin-top: 0;
-    font-size: inherit;
-    font-weight: inherit;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin-right: 0px;
+    margin-left: 70%;
   }
-
   .header__Logo__Image {
     margin: 0 auto;
     transition: opacity 0.3s ease-in-out;
@@ -87,10 +42,12 @@ export const HeaderMiddle = styled.div`
     border-style: none;
     vertical-align: top;
     width: 120px;
-
     @media screen and (min-width: 641px) {
       max-width: 100%;
     }
+  }
+  @media screen and (min-width: 1240px) {
+    margin-bottom: 40px;
   }
 
   @media screen and (min-width: 1240px) {
@@ -100,7 +57,7 @@ export const HeaderMiddle = styled.div`
 
 export const HeaderRight = styled.div`
   justify-content: flex-end;
-  flex: 1 0 0;
+  flex: 0.4;
   align-items: center;
   display: flex;
   box-sizing: border-box !important;
@@ -108,11 +65,12 @@ export const HeaderRight = styled.div`
   font-family: "Century Gothic", sans-serif;
   font-weight: 400;
   font-style: normal;
-
   @media screen and (min-width: 1240px) {
     margin-bottom: 40px;
   }
 `;
+
+export const HeaderBottom = styled.div``;
 
 export const User = styled(PersonIcon)`
   @media screen and (min-width: 641px) {
@@ -133,7 +91,6 @@ export const User = styled(PersonIcon)`
     text-decoration: none !important;
     font-color: black;
   }
-
   @media screen and (max-width: 641px) {
     display: none;
   } ;

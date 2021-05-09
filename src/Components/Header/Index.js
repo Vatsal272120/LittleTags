@@ -18,8 +18,8 @@ import {
   Search,
 } from "./Styles";
 import { Link } from "react-router-dom";
-import SearchBar from "./../SearchBar/Search";
 import SideDrawer from "./../SideDrawer/Index";
+import SearchBar from "./../SearchBar/Index";
 
 const Header = () => {
   const history = useHistory();

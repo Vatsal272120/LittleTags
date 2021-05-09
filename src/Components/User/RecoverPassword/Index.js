@@ -1,4 +1,6 @@
 import React from "react";
+
+import { useHistory } from "react-router-dom";
 import {
   LoginWrapper,
   LoginSection,
@@ -10,9 +12,7 @@ import {
   LoginSubmit,
   LoginHint,
   LoginSocials,
-} from "../Login/LoginStyles";
-
-import { useHistory } from "react-router-dom";
+} from "./../Login/Styles";
 
 const Recover = () => {
   const history = useHistory();

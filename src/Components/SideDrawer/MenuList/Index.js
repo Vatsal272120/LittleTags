@@ -5,7 +5,7 @@ import {
   Collapsible,
   Collapsible__Button,
   Collapsible__InnerTwo,
-} from "./MenuListStyles";
+} from "./Styles";
 import AddIcon from "@material-ui/icons/Add";
 import { useHistory } from "react-router-dom";
 

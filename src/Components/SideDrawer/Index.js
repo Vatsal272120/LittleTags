@@ -13,11 +13,12 @@ import {
   Socials,
 } from "./Styles";
 import CloseIcon from "@material-ui/icons/Close";
-import SideDrawerOptions from "./SideDrawerOptions/SideDrawerOptions";
+
 import InstagramIcon from "@material-ui/icons/Instagram";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import EmailIcon from "@material-ui/icons/Email";
 import { Link, useHistory } from "react-router-dom";
+import SideDrawerOptions from "./Options/Index";
 
 const SideDrawer = ({ toggleSiderBar, showSiderBar }) => {
   const history = useHistory();

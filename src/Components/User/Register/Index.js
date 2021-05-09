@@ -11,7 +11,7 @@ import {
   LoginSubmit,
   LoginHint,
   LoginSocials,
-} from "../Login/LoginStyles";
+} from "../Login/Styles";
 import { useHistory } from "react-router-dom";
 import { useStateValue } from "./../../../DataContext/StateProvider";
 
