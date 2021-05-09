@@ -1,11 +1,15 @@
 import React from "react";
-import { Main } from "./Styles";
+import { MegaMenuWrapper, MegaMenuInner } from "./Styles";
+import List from "./../ListItem/Index";
 
 const MegaMenu = () => {
   return (
-    <Main>
-      <h1>Main</h1>
-    </Main>
+    <MegaMenuWrapper>
+      <MegaMenuInner>
+        <List url={`/men`} Men={"Men"} />
+        <List url={`/women`} Men={"Women"} />
+      </MegaMenuInner>
+    </MegaMenuWrapper>
   );
 };
 
