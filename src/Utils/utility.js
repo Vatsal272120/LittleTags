@@ -1,3 +1,5 @@
+// for navbar megamu images
+
 export const imagesMen = [
   "https://images.unsplash.com/photo-1553143820-6bb68bc34679?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG1lbnMlMjBmYXNoaW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1559582798-678dfc71ccd8?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fG1lbnMlMjBmYXNoaW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
@@ -33,3 +35,136 @@ export const imagesWomen = [
   "https://images.unsplash.com/photo-1589935630354-10f66681c769?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTh8fHdvbWVuJTIwZmFzaGlvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
   "https://images.unsplash.com/photo-1570397369306-f42d7dbce359?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTAyfHx3b21lbiUyMGZhc2hpb258ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
 ];
+
+// for mobile responsiveness check
+export const DeviceWidthObject = {
+  MobileSmall: { max: 320, min: 0 },
+  MobileMedium: { max: 375, min: 321 },
+  MobileLarge: { max: 767, min: 376 },
+  Tablet: { max: 991, min: 768 },
+  LaptopSmall: { max: 1024, min: 992 },
+  LaptopLarge: { max: 1440, min: 1025 },
+  LargerThanLaptop: { max: 2560, min: 1441 },
+  LargeScreenMax: { max: 999999, min: 2561 },
+};
+
+export const IdDeviceBreakpointsByWidth = {
+  laptop_max: 1440,
+  laptop_min: 992,
+  tablet_min: 768,
+  tablet_max: 991,
+  mobile_max: 767,
+  default_min: 768, // Unrecognized device
+};
+export const IdMobileHeight = {
+  mobileLandscape_min: 320,
+  mobileLandscape_max: 425,
+};
+
+export const getWindowDimension = () => {
+  const width =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+  const height =
+    window.innerHeight ||
+    document.documentElement.clientHeight ||
+    document.body.clientHeight;
+  return { width, height };
+};
+
+export const getDeviceTypeInfo = () => {
+  const { width, height } = getWindowDimension();
+  const buildDeviceDetails = {
+    deviceType: "",
+    deviceTypeVariant: "",
+    orientation: "Portrait",
+    width,
+    height,
+  };
+  if (height < width) {
+    // Orientation is landscape
+    buildDeviceDetails.orientation = "Landscape";
+    if (height <= IdMobileHeight.mobileLandscape_max) {
+      // Mobile (landscape)
+      buildDeviceDetails.deviceType = "Mobile";
+
+      for (const devc in DeviceWidthObject) {
+        if (
+          height <= DeviceWidthObject[devc].max &&
+          height >= DeviceWidthObject[devc].min
+        ) {
+          buildDeviceDetails.deviceTypeVariant = devc;
+          break;
+        }
+      }
+    } else if (
+      width <= IdDeviceBreakpointsByWidth.tablet_max &&
+      width >= IdDeviceBreakpointsByWidth.tablet_min
+    ) {
+      // Tablet (landscape)
+      buildDeviceDetails.deviceType = "Tablet";
+      buildDeviceDetails.deviceTypeVariant = "Tablet";
+    } else if (
+      width <= IdDeviceBreakpointsByWidth.laptop_max &&
+      width >= IdDeviceBreakpointsByWidth.laptop_min
+    ) {
+      // Laptop (landscape)
+      buildDeviceDetails.deviceType = "Laptop";
+      for (const devc in DeviceWidthObject) {
+        if (
+          width <= DeviceWidthObject[devc].max &&
+          width >= DeviceWidthObject[devc].min
+        ) {
+          buildDeviceDetails.deviceTypeVariant = devc;
+          break;
+        }
+      }
+    } else {
+      // Larger than Laptop (landscape)
+
+      buildDeviceDetails.deviceType = "LargerThanLaptop";
+      for (const devc in DeviceWidthObject) {
+        if (
+          width <= DeviceWidthObject[devc].max &&
+          width >= DeviceWidthObject[devc].min
+        ) {
+          buildDeviceDetails.deviceTypeVariant = devc;
+          break;
+        }
+      }
+    }
+  } else {
+    // Orientation is portrait
+    buildDeviceDetails.orientation = "Portrait";
+    for (const devc in DeviceWidthObject) {
+      if (
+        width <= DeviceWidthObject[devc].max &&
+        width >= DeviceWidthObject[devc].min
+      ) {
+        buildDeviceDetails.deviceTypeVariant = devc;
+        break;
+      }
+    }
+    if (
+      width <= IdDeviceBreakpointsByWidth.laptop_max &&
+      width >= IdDeviceBreakpointsByWidth.laptop_min
+    ) {
+      buildDeviceDetails.deviceType = "Laptop";
+    }
+    if (
+      width <= IdDeviceBreakpointsByWidth.tablet_max &&
+      width >= IdDeviceBreakpointsByWidth.tablet_min
+    ) {
+      buildDeviceDetails.deviceType = "Tablet";
+    }
+
+    if (width <= IdDeviceBreakpointsByWidth.mobile_max) {
+      buildDeviceDetails.deviceType = "Mobile";
+    }
+    if (width > IdDeviceBreakpointsByWidth.laptop_max) {
+      buildDeviceDetails.deviceType = "LargerThanLaptop";
+    }
+    return buildDeviceDetails;
+  }
+};
