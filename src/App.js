@@ -10,6 +10,8 @@ import Recover from "./Components/User/RecoverPassword/Index";
 import AccountRegister from "./Pages/AccountRegister";
 import AccountLogin from "./Pages/AccountLogin";
 import HomePage from "./Pages/HomePage";
+import HeaderLarge from "./Components/Header/Large/Index";
+import Navbar from "./Components/Navbar/Index";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -38,6 +40,8 @@ function App() {
 
   return (
     <Router>
+      <HeaderLarge />
+      <Navbar />
       <Switch>
         <Route path='/contact'>
           <ContactUs />
