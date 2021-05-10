@@ -12,22 +12,10 @@ import AccountLogin from "./Pages/AccountLogin";
 import HomePage from "./Pages/HomePage";
 import HeaderLarge from "./Components/Header/Large/Index";
 import Navbar from "./Components/Navbar/Index";
+import SearchBar from "./Components/SearchBar/Index";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
-
-  const [mQuery, setMQuery] = useState({
-    matches: window.innerWidth > 1240 ? true : false,
-  });
-
-  // for conditional rendering
-  useEffect(() => {
-    let mediaQuery = window.matchMedia("(min-width: 1240px)");
-    setMQuery(mediaQuery);
-
-    // this is the cleanup function to remove the listener
-    return () => setMQuery(false);
-  }, []);
 
   // to keep track of user
   useEffect(() => {
@@ -56,7 +44,7 @@ function App() {
       <Responsive displayIn={["Laptop"]}>
         <>
           {" "}
-          <HeaderLarge /> <Navbar />
+          <HeaderLarge /> <Navbar />{" "}
         </>
       </Responsive>
 

@@ -21,42 +21,42 @@ const HeaderLarge = () => {
   const [showSearch, setshowSearch] = useState(false);
 
   const toggle = () => {
-    console.log("search");
     setshowSearch(!showSearch);
   };
 
   return (
-    <HeaderWrapper>
-      <HeaderTop>
-        <HeaderLeft>
-          <h1 className='header__Logo'>
-            {" "}
-            <Link to='/'>
-              <img
-                className='header__Logo__Image'
-                src='https://cdn.shopify.com/s/files/1/0082/5091/6915/files/amrapali_logo_transpaper_bg_120x.png?v=1564667363'
-                alt=''
-              />
+    <>
+      <HeaderWrapper>
+        <HeaderTop>
+          <HeaderLeft>
+            <h1 className='header__Logo'>
+              {" "}
+              <Link to='/'>
+                <img
+                  className='header__Logo__Image'
+                  src='https://cdn.shopify.com/s/files/1/0082/5091/6915/files/amrapali_logo_transpaper_bg_120x.png?v=1564667363'
+                  alt=''
+                />
+              </Link>
+            </h1>
+          </HeaderLeft>
+          <HeaderRight>
+            <Link to='/account'>
+              <User style={{ color: "black" }} />
             </Link>
-          </h1>
-        </HeaderLeft>
-        <HeaderRight>
-          <Link to='/account'>
-            <User style={{ color: "black" }} />
-          </Link>
-          <Link>
-            <Search onClick={toggle} style={{ color: "black" }} />
-          </Link>
+            <Link>
+              <Search onClick={toggle} style={{ color: "black" }} />
+            </Link>
 
-          <Link to='/cart'>
-            <Cart style={{ color: "black" }} />
-          </Link>
-        </HeaderRight>
-      </HeaderTop>
-      <HeaderBottom></HeaderBottom>
-
-      {showSearch ? <SearchBar /> : null}
-    </HeaderWrapper>
+            <Link to='/cart'>
+              <Cart style={{ color: "black" }} />
+            </Link>
+          </HeaderRight>
+        </HeaderTop>
+        <HeaderBottom></HeaderBottom>
+      </HeaderWrapper>
+      {showSearch ? <SearchBar /> : null}{" "}
+    </>
   );
 };
 
