@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <NavbarHorzizontalList>
       <ListItem>
-        <Link to='/' className='navLink'>
+        <Link className='navLink'>
           <p className='navLinkText' onClick={dropdown}>
             Shop
           </p>
@@ -53,7 +53,7 @@ const Navbar = () => {
         </Link>
       </ListItem>
       <ListItem>
-        <Link to='/' className='navLink'>
+        <Link className='navLink'>
           <p className='navLinkText' onClick={newArrivals}>
             New Arrivals
           </p>
@@ -68,7 +68,7 @@ const Navbar = () => {
         </Link>
       </ListItem>
       <ListItem>
-        <Link to='/' className='navLink'>
+        <Link className='navLink'>
           <p className='navLinkText' onClick={collections}>
             Collections
           </p>
@@ -83,7 +83,7 @@ const Navbar = () => {
         </Link>
       </ListItem>
       <ListItem>
-        <Link to='/' className='navLink'>
+        <Link className='navLink'>
           <p className='navLinkText' onClick={bestsellers}>
             BestSellers
           </p>

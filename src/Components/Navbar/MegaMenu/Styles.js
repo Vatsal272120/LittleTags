@@ -16,6 +16,7 @@ export const MegaMenuWrapper = styled.div`
   border-bottom: 1px solid #e7e7e7;
   transition: all 0.3s ease-in-out;
   display: block;
+  z-index: 1000;
 `;
 
 export const MegaMenuInner = styled.div`

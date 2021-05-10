@@ -2,6 +2,7 @@ import React from "react";
 
 import SideDrawer from "../Components/SideDrawer/Index";
 import Navbar from "./../Components/Navbar/Index";
+import AccountInfo from "./../Components/User/AccountInfo/AccountInfo";
 
 const HomePage = () => {
   /* const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +14,7 @@ const HomePage = () => {
       {/* <SideBar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       {/* <Login /> */}{" "}
+      <AccountInfo />
     </>
   );
 };
