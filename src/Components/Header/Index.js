@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { useHistory } from "react-router-dom";
 import { MobileIcon } from "./Styles";
@@ -20,8 +20,12 @@ import {
 import { Link } from "react-router-dom";
 import SideDrawer from "./../SideDrawer/Index";
 import SearchBar from "./../SearchBar/Index";
+import { auth } from "../../Utils/firebaseUtility";
+import { useStateValue } from "./../../DataContext/StateProvider";
 
 const Header = () => {
+  const [{ user }, dispatch] = useStateValue();
+
   const history = useHistory();
 
   const [showSearch, setshowSearch] = useState(false);
@@ -58,7 +62,7 @@ const Header = () => {
         </Link>
       </HeaderMid>
       <HeaderRight>
-        <Link to='/account'>
+        <Link to={!user ? "/account/login" : "/account"}>
           <User style={{ color: "black" }} />
         </Link>
 

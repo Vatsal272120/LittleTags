@@ -14,7 +14,6 @@ const HomePage = () => {
       {/* <SideBar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       {/* <Login /> */}{" "}
-      <AccountInfo />
     </>
   );
 };

@@ -14,8 +14,11 @@ import {
 import { Link, useHistory } from "react-router-dom";
 import Navbar from "../../Navbar/Index";
 import SearchBar from "../../SearchBar/Index";
+import { useStateValue } from "./../../../DataContext/StateProvider";
 
 const HeaderLarge = () => {
+  const [{ user }, dispatch] = useStateValue();
+
   const history = useHistory();
 
   const [showSearch, setshowSearch] = useState(false);
@@ -41,7 +44,7 @@ const HeaderLarge = () => {
             </h1>
           </HeaderLeft>
           <HeaderRight>
-            <Link to='/account'>
+            <Link to={!user ? "/account/login" : "/account"}>
               <User style={{ color: "black" }} />
             </Link>
             <Link>

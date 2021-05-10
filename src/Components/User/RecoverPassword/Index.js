@@ -17,6 +17,7 @@ import {
 const Recover = () => {
   const history = useHistory();
   const redirectToLoginPage = () => history.push("/account");
+
   return (
     <LoginWrapper>
       <LoginSection>

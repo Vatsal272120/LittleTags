@@ -14,13 +14,15 @@ import {
 } from "./Styles";
 import { auth } from "../../../Utils/firebaseUtility";
 import { useStateValue } from "./../../../DataContext/StateProvider";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const AccountInfo = () => {
   const [{ user }, dispatch] = useStateValue();
+  const history = useHistory();
 
   const logout = () => {
     auth.signOut();
+    history.push("/");
   };
   return (
     <MainWrapper>

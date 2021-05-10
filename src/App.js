@@ -13,6 +13,7 @@ import HomePage from "./Pages/HomePage";
 import HeaderLarge from "./Components/Header/Large/Index";
 import Navbar from "./Components/Navbar/Index";
 import SearchBar from "./Components/SearchBar/Index";
+import AccountInfo from "./Components/User/AccountInfo/AccountInfo";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -65,14 +66,16 @@ function App() {
           <ContactUs />
         </Route>
         <Route path='/restorepassword'>
-          <Header />
           <Recover />
         </Route>
         <Route path='/register'>
           <AccountRegister />
         </Route>
-        <Route path='/account'>
+        <Route path='/account/login'>
           <AccountLogin />
+        </Route>
+        <Route path='/account'>
+          <AccountInfo />
         </Route>
         <Route path='/'>
           <HomePage />
