@@ -1,7 +1,14 @@
 import React from "react";
+import { MainWrapper, Container, PageHeader } from "./Styles";
 
 const Address = () => {
-  return <div>this</div>;
+  return (
+    <MainWrapper>
+      <Container>
+        <PageHeader></PageHeader>
+      </Container>
+    </MainWrapper>
+  );
 };
 
 export default Address;
