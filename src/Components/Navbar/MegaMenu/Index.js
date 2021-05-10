@@ -5,15 +5,15 @@ import PushMenu from "./PushMenu/Index";
 import { Link } from "react-router-dom";
 import { imagesMen, imagesWomen } from "./../../../Utils/utility";
 
-const MegaMenu = ({ dropdown }) => {
+const MegaMenu = ({ dropdown, urlMen, urlWomen }) => {
   const men = imagesMen[Math.floor(Math.random() * imagesMen.length)];
   const women = imagesWomen[Math.floor(Math.random() * imagesWomen.length)];
 
   return (
     <MegaMenuWrapper onClick={dropdown}>
       <MegaMenuInner>
-        <List url={`/men`} Gender={"He"} />
-        <List url={`/women`} Gender={"She"} />
+        <List url={urlMen} Gender={"He"} />
+        <List url={urlWomen} Gender={"She"} />
         <ListTypeTwo>
           <Link to='/misc' className='link'>
             Miscellaneous

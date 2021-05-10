@@ -47,7 +47,9 @@ const Navbar = () => {
             Shop
           </p>
           <span className='linkSpacer'></span>
-          {megaMenu ? <MegaMenu dropdown={dropdown} /> : null}
+          {megaMenu ? (
+            <MegaMenu dropdown={dropdown} urlMen={`/men`} urlWomen={"/women"} />
+          ) : null}
         </Link>
       </ListItem>
       <ListItem>
@@ -56,7 +58,13 @@ const Navbar = () => {
             New Arrivals
           </p>
           <span className='linkSpacer'></span>
-          {showNewArrivals ? <MegaMenu newArrivals={newArrivals} /> : null}
+          {showNewArrivals ? (
+            <MegaMenu
+              newArrivals={newArrivals}
+              urlMen={`/new/men`}
+              urlWomen={"/new/women"}
+            />
+          ) : null}
         </Link>
       </ListItem>
       <ListItem>
@@ -65,7 +73,13 @@ const Navbar = () => {
             Collections
           </p>
           <span className='linkSpacer'></span>
-          {showCollections ? <MegaMenu collections={collections} /> : null}
+          {showCollections ? (
+            <MegaMenu
+              collections={collections}
+              urlMen={`/collections/men`}
+              urlWomen={"/collections/women"}
+            />
+          ) : null}
         </Link>
       </ListItem>
       <ListItem>
@@ -74,7 +88,13 @@ const Navbar = () => {
             BestSellers
           </p>
           <span className='linkSpacer'></span>
-          {showBestSellers ? <MegaMenu bestsellers={bestsellers} /> : null}
+          {showBestSellers ? (
+            <MegaMenu
+              bestsellers={bestsellers}
+              urlMen={`/bestsellers/men`}
+              urlWomen={"/bestsellers/women"}
+            />
+          ) : null}
         </Link>
       </ListItem>
     </NavbarHorzizontalList>
