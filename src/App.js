@@ -14,6 +14,7 @@ import HeaderLarge from "./Components/Header/Large/Index";
 import Navbar from "./Components/Navbar/Index";
 import SearchBar from "./Components/SearchBar/Index";
 import AccountInfo from "./Components/User/AccountInfo/AccountInfo";
+import Address from "./Components/User/AccountInfo/UserAddresses/Index";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -78,7 +79,7 @@ function App() {
           <AccountInfo />
         </Route>
         <Route path='/'>
-          <HomePage />
+          <Address />
         </Route>
       </Switch>
     </Router>

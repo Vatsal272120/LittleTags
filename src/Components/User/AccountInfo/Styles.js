@@ -7,6 +7,7 @@ export const MainWrapper = styled.div`
 export const Container = styled.div`
   max-width: 1420px;
   margin: 0 auto;
+  padding: 0 24px;
   display: block;
   @media screen and (min-width: 1240px) {
     padding: 0 80px;
@@ -16,10 +17,11 @@ export const Container = styled.div`
 export const PageHeader = styled.div`
   position: relative;
   display: block;
+  margin: 35px 0;
 
   .logOut {
     display: inline-block;
-    margin-bottom: 25px;
+    margin-bottom: -5px;
     color: #939393;
     font-family: Futura, sans-serif;
     font-weight: 400;
@@ -33,16 +35,19 @@ export const PageHeader = styled.div`
     cursor: pointer;
 
     @media screen and (min-width: 641px) {
-      font-size: 17px;
+      font-size: 18px;
     }
   }
 
-  @media screen and (min-width: 641px) {
+  @media screen and (max-width: 641px) {
     margin: 50px 0;
   }
 `;
 
 export const PageHeaderSection = styled.div`
+  margin-bottom: 60px;
+  margin-top: 0 !important;
+
   .section__Heading {
     margin-top: 0 !important;
     font-family: Futura, sans-serif;
@@ -60,6 +65,16 @@ export const PageHeaderSection = styled.div`
 
     @media screen and (min-width: 641px) {
       font-size: 22px;
+    }
+
+    @media screen and (max-width: 641px) {
+      font-size: 22px;
+      margin-bottom: 40px;
+
+      margin-block-start: 0.67em;
+      margin-block-end: 0.67em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
     }
   }
 
@@ -95,6 +110,9 @@ export const SectionDetails = styled.div`
 `;
 
 export const SectionOne = styled.div`
+  margin-top: 15px;
+  font-size: 13px;
+
   @media screen and (min-width: 641px) {
     margin-bottom: 0;
     flex: 1 0 0;
@@ -105,6 +123,12 @@ export const SectionOne = styled.div`
 
 export const SectionOneDetails = styled.div`
   .sectionDetails__orders {
+    margin-bottom: 24px;
+    margin-top: 150px;
+    font-size: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e7e7e7;
+    color: #939393;
     padding-bottom: 10px;
     border-bottom: 1px solid #e7e7e7;
     color: #939393;
@@ -124,14 +148,20 @@ export const SectionOneDetails = styled.div`
 
     @media screen and (min-width: 641px) {
       margin-bottom: 34px;
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: 641px) {
+      margin-bottom: 34px;
       font-size: 12px;
     }
   }
 `;
 
 export const SectionOneDetailsContent = styled.div`
+  margin-bottom: 50px;
+
   .order__details {
-    margin-bottom: 0;
     margin-top: 0;
     font-size: inherit;
     font-weight: inherit;
@@ -144,10 +174,27 @@ export const SectionOneDetailsContent = styled.div`
     color: #5c5c5c;
     font-family: "Century Gothic", sans-serif;
     line-height: 1.65;
+
+    @media screen and (min-width: 641px) {
+      margin-bottom: 34px;
+      font-size: 15px;
+    }
+
+    @media screen and (max-width: 641px) {
+      margin-bottom: 34px;
+      font-size: 12px;
+    }
+  }
+
+  .sectionDetails__orders {
+    margin-top: 150px;
+    margin-bottom: 150px;
   }
 `;
 
 export const SectionTwo = styled.div`
+  margin-top: 15px;
+  font-size: 13px;
   @media screen and (min-width: 1240px) {
     margin-left: 80px;
     flex-basis: 290px;
@@ -185,3 +232,4 @@ export const AddressButton = styled.button`
   text-decoration: none;
   cursor: pointer;
 `;
+/*  @media screen and (max-width: 641px) */
