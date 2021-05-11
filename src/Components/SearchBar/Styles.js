@@ -10,6 +10,7 @@ export const SearchBarWrapper = styled.div`
   transition: 0.2s ease-in-out;
   box-shadow: 0 -1px #e7e7e7 inset;
   transform: translateY(0);
+  z-index: 1000;
 `;
 
 export const SearchInner = styled.div`

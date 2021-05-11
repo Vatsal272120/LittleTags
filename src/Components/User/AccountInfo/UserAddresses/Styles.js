@@ -178,6 +178,7 @@ export const SegmentContent = styled.div`
     margin-top: 0;
     font-size: inherit;
     font-weight: inherit;
+    font-family: Futura, sans-serif;
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -185,6 +186,5 @@ export const SegmentContent = styled.div`
     margin-inline-end: 0px;
     font-style: normal;
     color: #5c5c5c;
-    font-family: "Century Gothic", sans-serif;
   }
 `;
