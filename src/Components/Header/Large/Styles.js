@@ -10,6 +10,7 @@ export const HeaderWrapper = styled.div`
   margin-right: 35px;
   background: white;
   color: #5c5c5c;
+  height: 50px;
 
   transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   display: block;

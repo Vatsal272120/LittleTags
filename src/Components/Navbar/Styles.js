@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const NavbarHorzizontalList = styled.div`
   
   margin-bottom:10px
+  display:flex;
+ 
   padding: 0;
   margin-block-start: 1em;
   box-shadow: 0 -1px #e7e7e7 inset;
@@ -12,6 +14,7 @@ export const NavbarHorzizontalList = styled.div`
   padding-inline-start: 40px;
   display: block;
   text-align: center;
+  
 
   @media screen and (min-width: 1240px) {
     margin-left: 0;

@@ -38,6 +38,10 @@ const Register = () => {
             }
           });
         }
+
+        db.collection("Users")
+          .doc(response.user.uid)
+          .set({ firstName: firstName });
       })
       .catch((e) => alert(e));
 

@@ -46,9 +46,9 @@ const Address = () => {
               <h2 className='segmentTitle'>Default Address</h2>
               <SegmentContent>
                 <p className='accountAddress'>
-                  <span className='one'>{user?.displayName}</span>
+                  <span className='one'>{user?.firstName}</span>
                   <br />
-                  {user?.addressLineOne}
+                  {user?.address1}
                   <br />
                   {user?.addressLineTwo}
                   <br />

@@ -38,8 +38,8 @@ function App() {
       }
     });
   }, []);
-
-  console.log(user);
+  console.log(user, "user");
+  console.log(user?.uid, "uid");
 
   return (
     <Router>
