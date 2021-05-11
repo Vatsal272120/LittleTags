@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   MainWrapper,
   Container,
@@ -14,15 +14,48 @@ import { Link, useHistory } from "react-router-dom";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import { useStateValue } from "../../../../DataContext/StateProvider";
 import Popup from "./Popup";
+import { db } from "../../../../Utils/firebaseUtility";
 
 const Address = () => {
   const [{ user }, dispatch] = useStateValue();
 
   const [showPopup, setshowPopup] = useState(false);
 
+  const [firstName, setfirstName] = useState("");
+  const [lastName, setlastName] = useState("");
+  const [address1, setaddress1] = useState("");
+  const [address2, setaddress2] = useState("");
+  const [phone, setphone] = useState("");
+  const [zip, setzip] = useState("");
+  const [city, setcity] = useState("");
+  const [userState, setuserState] = useState("");
+
   const history = useHistory();
 
   const toggle = () => setshowPopup(!showPopup);
+
+  useEffect(() => {
+    let docRef = db.collection("Users").doc(user?.uid);
+
+    docRef
+      .get()
+      .then((doc) => {
+        if (doc.exists) {
+          const details = doc.data();
+          console.log(details);
+          setfirstName(details.firstName);
+          setlastName(details.lastName);
+          setzip(details.zip);
+          setcity(details.city);
+          setaddress2(details.address2);
+          setaddress1(details.address1);
+          setuserState(details.state);
+        } else {
+          console.log("error fetching");
+        }
+      })
+      .catch((e) => alert(e));
+  });
 
   return (
     <MainWrapper>
@@ -46,15 +79,15 @@ const Address = () => {
               <h2 className='segmentTitle'>Default Address</h2>
               <SegmentContent>
                 <p className='accountAddress'>
-                  <span className='one'>{user?.firstName}</span>
+                  <span className='one'>{firstName}</span>
                   <br />
-                  {user?.address1}
+                  {address1}
                   <br />
-                  {user?.addressLineTwo}
+                  {address2}
                   <br />
-                  {user?.city}
+                  {city}
                   <br />
-                  {user?.state}
+                  {userState}
                 </p>
               </SegmentContent>
             </Segment>
