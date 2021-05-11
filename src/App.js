@@ -75,12 +75,13 @@ function App() {
         <Route path='/account/login'>
           <AccountLogin />
         </Route>
+        <Route path='/account/addresses'>
+          <Address />
+        </Route>
         <Route path='/account'>
           <AccountInfo />
         </Route>
-        <Route path='/'>
-          <Address />
-        </Route>
+        <Route path='/'></Route>
       </Switch>
     </Router>
   );
