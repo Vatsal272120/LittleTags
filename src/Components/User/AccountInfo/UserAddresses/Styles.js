@@ -12,8 +12,11 @@ export const Container = styled.div`
   @media screen and (min-width: 1240px) {
     padding: 0 80px;
   }
-`;
 
+  @media screen and (max-width: 641px) {
+    margin-bottom: 40px;
+  }
+`;
 export const PageHeader = styled.div`
   position: relative;
   display: block;
@@ -32,6 +35,9 @@ export const PageHeader = styled.div`
     background-color: transparent;
     text-decoration: none;
     cursor: pointer;
+    @media screen and (max-width: 641px) {
+      padding-left: 5px;
+    }
   }
 
   .MuiSvgIcon-root {
@@ -53,6 +59,10 @@ export const PageHeader = styled.div`
     letter-spacing: 0.2em;
     text-transform: uppercase;
     cursor: pointer;
+
+    @media screen and (max-width: 641px) {
+      padding-left: 25px;
+    }
   }
 
   @media screen and (min-width: 641px) {
@@ -62,6 +72,10 @@ export const PageHeader = styled.div`
 
 export const HeaderDetails = styled.div`
   display: block;
+
+  @media screen and (max-width: 641px) {
+    padding-left: 25px;
+  }
 
   .headerDetails__heading {
     margin-top: 0 !important;
@@ -78,6 +92,12 @@ export const HeaderDetails = styled.div`
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     line-height: 1.65;
+
+    @media screen and (max-width: 641px) {
+      margin-bottom: 10px;
+      margin-top: 0 !important;
+      font-size: 22px;
+    }
   }
 
   @media screen and (min-width: 1008px) {
@@ -117,6 +137,10 @@ export const HeaderButton = styled.button`
   text-indent: 0px;
   text-shadow: none;
 
+  @media screen and (max-width: 641px) {
+    padding-left: 25px;
+  }
+
   @media screen and (min-width: 1008px) {
     margin-top: 30px;
   }
@@ -132,6 +156,10 @@ export const AddressDetails = styled.div`
 
   @media screen and (min-width: 1240px) {
     margin-left: -80px;
+  }
+
+  @media screen and (max-width: 641px) {
+    padding-left: 25px;
   }
 `;
 
@@ -153,6 +181,11 @@ export const UserAddress = styled.div`
 `;
 
 export const Segment = styled.div`
+  width: 90vw;
+
+  @media screen and (max-width: 641px) {
+    margin-top: 45px;
+  }
   .segmentTitle {
     margin-bottom: 34px;
     padding-bottom: 10px;
@@ -170,6 +203,9 @@ export const Segment = styled.div`
     margin-block-end: 0.83em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
+
+    @media screen and (max-width: 641px) {
+    }
   }
 `;
 
