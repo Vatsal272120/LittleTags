@@ -41,7 +41,7 @@ const Register = () => {
 
         db.collection("Users")
           .doc(response.user.uid)
-          .set({ firstName: firstName });
+          .set({ displayName: firstName });
       })
       .catch((e) => alert(e));
 

@@ -34,9 +34,7 @@ const AccountInfo = () => {
         </PageHeader>
         <PageHeaderSection>
           <h1 className='section__Heading'>My account</h1>
-          <p className='section__Description'>
-            Welcome back, {user?.displayName}
-          </p>
+          <p className='section__Description'>Welcome back {user?.firstName}</p>
         </PageHeaderSection>
         <SectionDetails>
           <SectionOne>
