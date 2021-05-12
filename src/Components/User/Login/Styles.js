@@ -49,6 +49,11 @@ export const LoginPageContent = styled.div`
 export const LoginForm = styled.form`
   display: block;
   width: 100%;
+
+  @media screen and (max-width: 641px) {
+    margin-top: 5rem;
+    font-size: 12px;
+  }
 `;
 
 export const LoginFormHeader = styled.header`
@@ -83,6 +88,10 @@ export const LoginFormHeader = styled.header`
     @media screen and (min-width: 641px) {
       font-size: 22px;
     }
+
+    @media screen and (max-width: 641px) {
+      font-size: 22px;
+    }
   }
 
   .formLegend {
@@ -100,6 +109,10 @@ export const LoginFormHeader = styled.header`
     font-style: normal;
     color: #5c5c5c;
     line-height: 1.65;
+
+    @media screen and (max-width: 641px) {
+      font-size: 12px;
+    }
   }
 `;
 
