@@ -106,6 +106,12 @@ export const HeaderRight = styled.div`
   --use-sticky-header: 1;
   --use-unsticky-header: 0;
   text-size-adjust: 100%;
+
+  @media screen and (max-width: 641px) {
+    .icon {
+      display: none;
+    }
+  }
 `;
 
 export const User = styled(PersonIcon)`

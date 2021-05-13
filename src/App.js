@@ -38,6 +38,8 @@ function App() {
       }
     });
   }, []);
+
+  useEffect(() => {}, []);
   console.log(user, "user");
   console.log(user?.uid, "uid");
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { NavbarHorzizontalList, ListItem } from "./Styles.js";
 
 import { Link, useHistory } from "react-router-dom";
@@ -6,10 +6,32 @@ import MegaMenu from "./MegaMenu/Index";
 import DropDown from "./DropDown/Index";
 
 const Navbar = () => {
+  const node = useRef();
+
   const [megaMenu, setMegaMenu] = useState(false);
   const [showNewArrivals, setshowNewArrivals] = useState(false);
   const [showCollections, setshowCollections] = useState(false);
   const [showBestSellers, setshowBestSellers] = useState(false);
+
+  const handleClick = (e) => {
+    if (node.current.contains(e.target)) {
+      // inside click
+      return;
+    }
+    // outside click
+    setMegaMenu(false);
+    setshowNewArrivals(false);
+    setshowCollections(false);
+    setshowBestSellers(false);
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClick);
+    };
+  }, []);
 
   const dropdown = () => {
     setMegaMenu(!megaMenu);
@@ -40,7 +62,7 @@ const Navbar = () => {
   };
 
   return (
-    <NavbarHorzizontalList>
+    <NavbarHorzizontalList ref={node}>
       <ListItem>
         <Link className='navLink'>
           <p className='navLinkText' onClick={dropdown}>

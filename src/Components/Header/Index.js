@@ -63,7 +63,7 @@ const Header = () => {
       </HeaderMid>
       <HeaderRight>
         <Link to={!user ? "/account/login" : "/account"}>
-          <User style={{ color: "black" }} />
+          <User className='icon' style={{ color: "black" }} />
         </Link>
 
         <Link>

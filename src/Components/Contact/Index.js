@@ -8,7 +8,12 @@ import {
   ContentColumn,
   HeaderDetails,
   Header,
+  Socials,
+  ContentSocial,
 } from "./Styles";
+
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
 
 const Contact = () => {
   return (
@@ -26,10 +31,27 @@ const Contact = () => {
                       the products or if you want to know more about bulk
                       orders, International orders/shipping rates and
                       collaborations. <br />
-                      <p>Monday - Friday (11:00 am to 5:00 pm)</p>
                     </p>
                   </HeaderDetails>
                 </Header>
+                <Socials>
+                  <ContentSocial>
+                    <a
+                      href='https://www.instagram.com/'
+                      className='link'
+                      target='_blank'>
+                      <InstagramIcon />
+                    </a>
+                    <a href='https://www.facebook.com/' className='link'>
+                      <FacebookIcon />
+                    </a>
+                    <a
+                      href='mailto: vatsalpatel1073@gmail.com'
+                      className='link'>
+                      Send Email
+                    </a>
+                  </ContentSocial>
+                </Socials>
               </ContentColumn>
             </ContentOne>
           </ContentSection>

@@ -85,7 +85,7 @@ export const HeaderDetails = styled.div`
     margin-inline-start: 0px;
     color: #000;
     margin-inline-end: 0px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: normal;
     line-height: 1.8;
     letter-spacing: 0em;
@@ -111,5 +111,34 @@ export const HeaderDetails = styled.div`
     @media screen and (min-width: 1296px) {
       font-size: calc(2.8 * 1rem);
     }
+  }
+`;
+
+export const Socials = styled.div`
+  clear: both;
+  padding-left: 17px;
+  padding-right: 17px;
+  position: relative;
+  height: auto;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  display: block;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 0em;
+  text-transform: none;
+`;
+
+export const ContentSocial = styled.div`
+  display: flex;
+
+  .MuiSvgIcon-root {
+    cursor: pointer;
+  }
+
+  .link {
+    color: black;
+    cursor: pointer;
+    margin-left: 15px;
   }
 `;
