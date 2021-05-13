@@ -1,87 +1,40 @@
 import React from "react";
 import {
   Conatainer,
-  ContainerHeader,
-  HeaderSection,
+  Content_Wrapper,
   Content,
-  ContentHeader,
-  ContentDetails,
+  ContentSection,
+  ContentOne,
+  ContentColumn,
+  HeaderDetails,
+  Header,
 } from "./Styles";
 
 const Contact = () => {
   return (
     <Conatainer>
-      <ContainerHeader>
-        <HeaderSection>
-          <h1 className='headerHeading'>CONTACT US</h1>
-        </HeaderSection>
+      <Content_Wrapper>
         <Content>
-          <ContentHeader></ContentHeader>
-          <ContentDetails>
-            <p className='header'>
-              <span className='headerSpan'>
-                We are happy to connect with you at LittleTags.
-                <br />
-              </span>
-              <span className='headerSpan'>
-                Please feel free to contact us for any query, concern,
-                suggestion, or just about anything to do with us.
-                <br />
-              </span>
-            </p>
-
-            <p className='details'>
-              <b>
-                <br />
-                Please get in touch with us through any of the following means:
-                <br />
-              </b>
-
-              <span>Mail:</span>
-              <a
-                href='mailto:mailtoamrapaliboutique@gmail.com'
-                className='link'
-                target='_blank'>
-                <span>
-                  maillittletagsteamdelta@gmail.com
-                  <br />{" "}
-                </span>
-              </a>
-              <span>
-                Whatsapp: +91-9023665633
-                <br />
-              </span>
-
-              <span>
-                Call: +91-9023665633 (Timings: 11 a.m. - 9:00 p.m)
-                <br />
-              </span>
-
-              <span>Instagram:</span>
-              <a
-                href='https://www.instagram.com/'
-                className='link'
-                target='_blank'>
-                <span>
-                  https://www.instagram.com/
-                  <br />{" "}
-                </span>
-              </a>
-
-              <span>Facebook:</span>
-              <a
-                href='https://www.facebook.com/'
-                className='link'
-                target='_blank'>
-                <span>
-                  https://www.facebook.com/
-                  <br />{" "}
-                </span>
-              </a>
-            </p>
-          </ContentDetails>
+          <ContentSection>
+            <ContentOne>
+              <ContentColumn>
+                <Header>
+                  <HeaderDetails>
+                    <h2 className='contact'>Contact US</h2>
+                    <p className='details'>
+                      Feel free to connect if you have any queries related to
+                      the products or if you want to know more about bulk
+                      orders, International orders/shipping rates and
+                      collaborations. <br />
+                      <p>Monday - Friday (11:00 am to 5:00 pm)</p>
+                    </p>
+                  </HeaderDetails>
+                </Header>
+              </ContentColumn>
+            </ContentOne>
+          </ContentSection>
         </Content>
-      </ContainerHeader>
+      </Content_Wrapper>
     </Conatainer>
   );
 };
