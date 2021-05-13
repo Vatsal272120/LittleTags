@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 
 import {
   SearchBarWrapper,
@@ -12,6 +12,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import { useHistory } from "react-router-dom";
 
 const SearchBar = ({ showSearch, toggle }) => {
+  const node = useRef();
   let history = useHistory();
 
   const searchPage = (e) => {

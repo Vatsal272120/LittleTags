@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 
 import {
   HeaderWrapper,
@@ -17,6 +17,8 @@ import SearchBar from "../../SearchBar/Index";
 import { useStateValue } from "./../../../DataContext/StateProvider";
 
 const HeaderLarge = () => {
+  const node = useRef();
+
   const [{ user }, dispatch] = useStateValue();
 
   const history = useHistory();
@@ -58,7 +60,7 @@ const HeaderLarge = () => {
         </HeaderTop>
         <HeaderBottom></HeaderBottom>
       </HeaderWrapper>
-      {showSearch ? <SearchBar /> : null}{" "}
+      {showSearch ? <SearchBar toggle={toggle} /> : null}{" "}
     </>
   );
 };

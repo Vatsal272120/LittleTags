@@ -42,6 +42,7 @@ export const SearchForm = styled.form`
   flex: 1 0 auto;
   margin-top: 1em;
   padding: 25px;
+  border-bottom: 1px solid #e7e7e7;
 
   .input {
     margin-left: 25px;
