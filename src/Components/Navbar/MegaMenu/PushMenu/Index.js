@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { PushMenuWrapper, ImageWrapper } from "./Styles";
 import { Link, useHistory } from "react-router-dom";
 import { motion } from "framer-motion";

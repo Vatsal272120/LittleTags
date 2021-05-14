@@ -1,4 +1,4 @@
-// for navbar megamu images
+// for navbar mega-menu images.
 
 export const imagesMen = [
   "https://images.unsplash.com/photo-1553143820-6bb68bc34679?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fG1lbnMlMjBmYXNoaW9ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
