@@ -25,6 +25,7 @@ export const HeaderWrapper = styled.div`
 export const HeaderTop = styled.div`
   display: flex;
   margin-top: 10px;
+  margin-bottom: 10px;
 `;
 
 export const HeaderLeft = styled.div`
@@ -72,7 +73,9 @@ export const HeaderRight = styled.div`
   }
 `;
 
-export const HeaderBottom = styled.div``;
+export const HeaderBottom = styled.div`
+  margin-top: 40px;
+`;
 
 export const User = styled(PersonIcon)`
   @media screen and (min-width: 641px) {
